@@ -1,7 +1,9 @@
 package pages.telecomunications;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.base.BasePage;
 
 public class MobilePhoneReplenishmentPage extends BasePage {
@@ -17,6 +19,9 @@ public class MobilePhoneReplenishmentPage extends BasePage {
     private final By inputPhoneNumber = By.xpath("//input[@data-qa-node='phone-number']");
     private final By inputForAmount = By.xpath("//input[@data-qa-node='amount']");
     private final By buttonSubmitToTheCart = By.xpath("//button[@data-qa-node='submit']");
+    private final By firstName = By.xpath("//input[@data-qa-node='firstNamedebitSource']");
+    private final By lastName = By.xpath("//input[@data-qa-node='lastNamedebitSource']");
+    private final By paymentDetails = By.xpath("//div[@data-qa-node='details']");
 
 
     /**
@@ -72,6 +77,24 @@ public class MobilePhoneReplenishmentPage extends BasePage {
      */
     public MobilePhoneReplenishmentPage submitToTheCard(){
         driver.findElement(buttonSubmitToTheCart).click();
+        return this;
+    }
+
+    public MobilePhoneReplenishmentPage enterFirstName(String name){
+        driver.findElement(firstName).sendKeys(name);
+        return this;
+    }
+
+    public MobilePhoneReplenishmentPage enterLastName(String name){
+        driver.findElement(lastName).sendKeys(name);
+        return this;
+    }
+
+    public MobilePhoneReplenishmentPage checkPaymentDetailsIsPresentInCart(String text){
+        waitElementIsVisible(driver.findElement(paymentDetails));
+        WebElement details =  driver.findElement(paymentDetails);
+        waitElementIsVisible(details);
+        Assertions.assertEquals(text,details.getText());
         return this;
     }
 

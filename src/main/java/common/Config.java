@@ -11,13 +11,13 @@ public class Config {
     public static final String PLATFORM_AND_BROWSER = "CHROME_WINDOWS";
 
     /**
-     * Очищает файлы cookies
+     * Очищает файлы cookies если true
      */
-    public static final Boolean CLEAR_COOKIES = true;
+    public static final Boolean CLEAR_COOKIES = false;
 
     /**
-     * Закрывает браузер
+     * Закрывает браузер если значение false
      */
-    public static final Boolean HOLD_BROWSER_OPEN = false;
+    public static final Boolean HOLD_BROWSER_OPEN = true;
 
 }

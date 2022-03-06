@@ -20,11 +20,15 @@ public class MobilePhoneReplenishmentPositiveTest extends BaseTest {
     public void checkMinimumReplenishmentAmount(){
         basePage.goToURL(MOBILE_PAYMENT_URL);
         mobilePhoneReplenishmentPage.enterPhoneNumber(MOBILE_PAYMENT_PHONE_NUMBER)
-                .enterAmount("1")
+                .enterAmount("12")
                 .enterCardFrom(MOBILE_PAYMENT_CARD)
                 .enterCardExpDate(MOBILE_PAYMENT_CARD_EXP_DATE)
                 .enterCvv(MOBILE_PAYMENT_CARD_CVV)
-                .submitToTheCard();
+                .submitToTheCard()
+//                .enterFirstName(FIRST_NAME)
+//                .enterLastName(LAST_NAME)
+//                .submitToTheCard()
+                .checkPaymentDetailsIsPresentInCart("Mobile payment. Phone number +380686979712");
     }
 
 }
