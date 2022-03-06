@@ -1,5 +1,6 @@
 package pages.loans;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class CarLoansPage {
@@ -8,6 +9,13 @@ public class CarLoansPage {
 
     public CarLoansPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public final By tabAgreements = By.xpath("//div[contains(text(), 'Agreements')]");
+
+    public CarLoansPage selectAgreementsTab(){
+        driver.findElement(tabAgreements).click();
+        return this;
     }
 
 }

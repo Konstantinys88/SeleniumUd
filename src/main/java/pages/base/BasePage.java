@@ -34,7 +34,9 @@ public class BasePage {
         new WebDriverWait(driver, EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
-
+    /**
+     * проверьте, виден ли фрейм авторизации
+     */
     public void isAuthWidgetPresent(){
         WebElement authFrame = driver.findElement(authWidget);
         waitElementIsVisible(authFrame);
