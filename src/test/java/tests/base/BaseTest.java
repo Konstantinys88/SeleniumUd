@@ -15,7 +15,7 @@ import pages.telecomunications.MobilePhoneReplenishmentPage;
 import static common.Config.CLEAR_COOKIES;
 import static common.Config.HOLD_BROWSER_OPEN;
 
-@Execution(ExecutionMode.CONCURRENT) //Запускает все тесты наследники многопоточно
+//@Execution(ExecutionMode.CONCURRENT) //Запускает все тесты наследники многопоточно
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseTest {
 

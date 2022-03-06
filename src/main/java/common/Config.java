@@ -18,6 +18,6 @@ public class Config {
     /**
      * Закрывает браузер
      */
-    public static final Boolean HOLD_BROWSER_OPEN = true;
+    public static final Boolean HOLD_BROWSER_OPEN = false;
 
 }
