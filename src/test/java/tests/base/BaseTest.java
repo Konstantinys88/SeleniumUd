@@ -21,6 +21,11 @@ public class BaseTest {
     protected CarLoansPage carLoansPage = new CarLoansPage(driver);
     protected MobilePhoneReplenishmentPage mobilePhoneReplenishmentPage = new MobilePhoneReplenishmentPage(driver);
 
+    /**
+     * Очищает cookies
+     */
+
+
     @AfterEach
     void cleansCookiesAndLocalStorage() {
         if (CLEAR_COOKIES) {
@@ -30,9 +35,12 @@ public class BaseTest {
         }
     }
 
+    /**
+     * закрывает браузер если HOLD_BROWSER_OPEN false
+     */
     @AfterAll
     void close() {
-        if(!HOLD_BROWSER_OPEN){
+        if (!HOLD_BROWSER_OPEN) {
             driver.close();
         }
 

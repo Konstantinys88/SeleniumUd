@@ -27,7 +27,7 @@ public class BasePage {
     }
 
     /**
-     *  появления элементов видимости в модели DOM
+     * появления элементов видимости в модели DOM
      */
 
     public WebElement waitElementIsVisible(WebElement element){

@@ -12,11 +12,10 @@ public class MobilePhoneReplenishmentPage extends BasePage {
 
     private final By buttonWallet = By.xpath("//div[contains(text(), 'My wallet')]");
 
-    public MobilePhoneReplenishmentPage selectCardFromWallet(){
+    public MobilePhoneReplenishmentPage selectCardFromWallet() {
         driver.findElement(buttonWallet).click();
         return this;
     }
-
 
 
 }
