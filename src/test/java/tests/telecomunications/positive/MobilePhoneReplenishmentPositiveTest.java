@@ -28,7 +28,7 @@ public class MobilePhoneReplenishmentPositiveTest extends BaseTest {
 //                .enterFirstName(FIRST_NAME)
 //                .enterLastName(LAST_NAME)
 //                .submitToTheCard()
-                .checkPaymentDetailsIsPresentInCart("Mobile payment. Phone number +380686979712");
+                .checkPaymentDetailsIsPresentInCart("1Mobile payment. Phone number +380686979712");
     }
 
 }

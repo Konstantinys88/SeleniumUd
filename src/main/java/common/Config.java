@@ -27,9 +27,9 @@ public class Config {
      */
     public static final Boolean CLEAR_REPORTS_DIT = false;
 
-    static {
-        Configuration.holdBrowserOpen = HOLD_BROWSER_OPEN;
-        Configuration.reportsFolder = "build/reports/tests";
-    }
+//    static {
+//        Configuration.holdBrowserOpen = HOLD_BROWSER_OPEN;
+//        Configuration.reportsFolder = "build/reports/tests";
+//    }
 
 }
