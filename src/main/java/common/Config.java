@@ -1,5 +1,7 @@
 package common;
 
+import com.codeborne.selenide.Configuration;
+
 public class Config {
 
     /**
@@ -23,6 +25,11 @@ public class Config {
     /**
      * Очищает reports/tests если true
      */
-    public static final Boolean CLEAR_REPORTS_DIT = true;
+    public static final Boolean CLEAR_REPORTS_DIT = false;
+
+    static {
+        Configuration.holdBrowserOpen = HOLD_BROWSER_OPEN;
+        Configuration.reportsFolder = "build/reports/tests";
+    }
 
 }
