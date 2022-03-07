@@ -18,7 +18,7 @@ public class Config {
     /**
      * Закрывает браузер если значение false
      */
-    public static final Boolean HOLD_BROWSER_OPEN = false;
+    public static final Boolean HOLD_BROWSER_OPEN = true;
 
     /**
      * Очищает reports/tests если true
